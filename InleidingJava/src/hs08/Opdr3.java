@@ -9,6 +9,7 @@ public class Opdr3 extends Applet {
 
     Button ok;
     TextField textfield;
+    double uitkomst, text;
 
 
     public void init() {
@@ -25,11 +26,16 @@ public class Opdr3 extends Applet {
         textfield.setLocation(10,10);
         ok.setSize(40,20);
         ok.setLocation(40,70);
+
+        g.drawString("De uitkomst is: " + uitkomst, 10,120);
     }
 
     class OkListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-
+            String message = textfield.getText();
+            text = Double.parseDouble(message);
+            uitkomst = ((text / 100) * 21) + text;
+            repaint();
         }
     }
 }
