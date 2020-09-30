@@ -27,15 +27,15 @@ public class Opdr3 extends Applet {
         ok.setSize(40,20);
         ok.setLocation(40,70);
 
-        g.drawString("De uitkomst is: " + uitkomst, 10,120);
+        g.drawString("De uitkomst is:  " + uitkomst, 10,120);
     }
 
     class OkListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-            String message = textfield.getText();
-            text = Double.parseDouble(message);
+            String getal = textfield.getText();
+            text = Double.parseDouble(getal);
             uitkomst = ((text / 100) * 21) + text;
-            repaint();
+        repaint();
         }
     }
 }
