@@ -8,16 +8,13 @@ import java.awt.event.ActionListener;
 public class Opdr1 extends Applet {
 
     TextField tekstvak;
-    Label label;
-    String tekst, tekst2;
-    int getal;
+    int getal, tekst;
 
     public void init() {
         tekstvak = new TextField();
         tekstvak.addActionListener(new TekstListener());
 
-        tekst = "";
-        tekst2 = "";
+        tekst = 0;
 
         add(tekstvak);
     }
@@ -25,11 +22,18 @@ public class Opdr1 extends Applet {
     public void paint(Graphics g) {
         tekstvak.setLocation(10,10);
         tekstvak.setSize(150,50);
+
+        g.drawString("Hoogste getal: " + tekst, 10,75);
     }
 
     class TekstListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
-
+            String s = tekstvak.getText();
+            getal = Integer.parseInt(s);
+            if (getal > tekst){
+                tekst = getal;
+                repaint();
+            }
         }
     }
 }
