@@ -6,7 +6,7 @@ import java.awt.*;
 public class Opdr3 extends Applet {
 
     public void init() {
-
+        setBackground(Color.LIGHT_GRAY);
     }
 
     public void paint(Graphics g) {
