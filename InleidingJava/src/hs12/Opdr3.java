@@ -15,8 +15,8 @@ public class Opdr3 extends Applet {
         vak = new TextField[5];
         int teller;
         for (teller = 0; teller < vak.length; teller++){
-            vak[0] = new TextField();
-            add(vak[0]);
+            vak[teller] = new TextField();
+            add(vak[teller]);
         }
 
         ok = new Button("ok");
@@ -33,9 +33,13 @@ public class Opdr3 extends Applet {
             int[] s = new int[5];
             int i;
             for (i = 0; i < vak.length; i++){
-                s[i] = Integer.parseInt(vak[i].getText());
+               s[i] = Integer.parseInt(vak[i].getText());
             }
+            Arrays.sort(s);
 
+            for (i = 0; i < vak.length; i++){
+                vak[i].setText(s[i] + "");
+            }
 
         }
     }
