@@ -25,14 +25,9 @@ public class Opdr4 extends Applet {
         gezocht = 0;
 
         getallen = new int[50];
-        for (teller = 0; teller < getallen.length;) {
+        for (teller = 0; teller < getallen.length; teller++) {
             getallen[teller] = 3 + getal;
-            getal ++;
-
-            if (getallen[teller] == gezocht) {
-                found = true;
-            }
-            teller++;
+            getal++;
         }
     }
 
@@ -42,7 +37,7 @@ public class Opdr4 extends Applet {
         ok.setLocation(70, 10);
         ok.setSize(30, 30);
 
-        if (found = true){
+        if (found == true){
             g.drawString("De waarde is gevonden", 10, 70);
         }
         else {
@@ -55,7 +50,14 @@ public class Opdr4 extends Applet {
         public void actionPerformed(ActionEvent e) {
             String s = tekstvak.getText();
             gezocht = Integer.parseInt(s);
+            found = false;
+            for (teller = 0; teller < getallen.length; teller++){
+                if (gezocht == getallen[teller]) {
+                    found = true;
+                }
+            }
             repaint();
+
         }
     }
 }
