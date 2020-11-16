@@ -38,6 +38,7 @@ public class Opdr6 extends Applet {
 
     class VakListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
+            nummer = 0;
             String s = vak.getText();
             gezocht = Integer.parseInt(s);
 
