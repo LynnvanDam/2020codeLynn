@@ -11,7 +11,8 @@ public class PraktijkOpdracht extends Applet {
     Button ok;
     String text [];
     String drawstring = "";
-    int y;
+    int y = 110;
+    int teller = 0;
 
     // array maken -> vullen met elk nummer en naam
     // na 10 regels -> alles laten zien en resetten
@@ -32,24 +33,25 @@ public class PraktijkOpdracht extends Applet {
         naam.setSize(50,30);
         ok.setLocation(70,40);
         ok.setSize(30,30);
-
+        if (teller == text.length){
+            for (teller = 0; teller < text.length; teller++){
+                drawstring = text[teller];
+                g.drawString(drawstring,10,y);
+                y += 10;
+            }
+        }
         g.drawString("Vul hier een nummer en naam in:", 10,20);
-        g.drawString(drawstring,10,y);
+
     }
 
     class OkListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {
             String s = naam.getText();
-            int teller = 0;
-            text[teller] = s;
-            teller ++;
 
-            if (teller == text.length){
-                for (teller = 0; teller < text.length; teller++){
-                    drawstring = text[teller];
-                    y += 10;
-                }
-            }
+            text[teller] = s;
+            teller++;
+
+
             repaint();
         }
     }
