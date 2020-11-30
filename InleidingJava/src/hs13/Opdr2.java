@@ -24,22 +24,6 @@ public class Opdr2 extends Applet {
             y += 15;
         }
 
-        int y1 = 5;
-        int y2 = 20;
-        int x3 = 10;
-        int x4 = 10;
-        for (i = 0; i < 10; i++){
-            g.drawLine(x3,y1,x4,y2);
-            x3 += 30;
-            x4 += 30;
-            if (i == 9){
-                i = 0;
-                x3 = 10;
-                x4 = 10;
-                y1 += 15;
-                y2 += 15;
-            }
-        }
 
     }
 
