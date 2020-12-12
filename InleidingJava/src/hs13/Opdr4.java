@@ -14,11 +14,37 @@ public class Opdr4 extends Applet {
     }
 
     void tekenBoom (Graphics g, int logWidth, int logHeight, int leavesWidth, int leavesHeight) {
-        g.setColor(new Color(130, 67, 0));
-        g.fillRect(35,55,logWidth, logHeight);
 
-        g.setColor(Color.GREEN);
-        g.fillOval(10,10,leavesWidth,leavesHeight);
+        int numberOfTreesRow = 5;
+        int xLog = 35;
+        int yLog = 55;
+        int xLeaves = 10;
+        int yLeaves = 10;
+        for (int i = 0; i < numberOfTreesRow; i++) {
+            g.setColor(new Color(130, 67, 0));
+            g.fillRect(xLog, yLog, logWidth, logHeight);
+
+            g.setColor(Color.GREEN);
+            g.fillOval(xLeaves, yLeaves, leavesWidth, leavesHeight);
+            xLog += 80;
+            xLeaves += 80;
+        }
+
+        xLog = 35;
+        yLog += 80;
+        xLeaves = 10;
+        yLeaves += 80;
+
+        for (int i = 0; i < numberOfTreesRow; i++) {
+            g.setColor(new Color(130, 67, 0));
+            g.fillRect(xLog, yLog, logWidth, logHeight);
+
+            g.setColor(Color.GREEN);
+            g.fillOval(xLeaves, yLeaves, leavesWidth, leavesHeight);
+            xLog += 80;
+            xLeaves += 80;
+        }
+
 
     }
 }

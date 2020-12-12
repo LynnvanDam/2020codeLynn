@@ -9,8 +9,7 @@ public class Opdr1 extends Applet {
 
     Button ok;
     Button reset;
-    TextField textvak;
-    TextField textvak2;
+    TextField textvak, textvak2;
 
     public void init() {
         setBackground(Color.DARK_GRAY);
@@ -39,8 +38,8 @@ public class Opdr1 extends Applet {
         textvak2.setLocation(10,110);
         textvak2.setSize(150,50);
 
-        textvak.setText("...");
-        textvak2.setText("...");
+        textvak.setText("");
+        textvak2.setText("");
     }
 
     class OkListener implements ActionListener {
@@ -57,8 +56,8 @@ public class Opdr1 extends Applet {
 
         public void actionPerformed(ActionEvent e) {
 
-            textvak.setText("...");
-            textvak2.setText("...");
+            textvak.setText("");
+            textvak2.setText("");
 
         }
     }

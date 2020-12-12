@@ -2,7 +2,6 @@ package hs12;
 
 import java.applet.Applet;
 import java.awt.*;
-import java.util.*;
 
 public class Opdr1 extends Applet {
 

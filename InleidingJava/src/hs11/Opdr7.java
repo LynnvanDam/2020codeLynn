@@ -18,6 +18,7 @@ public class Opdr7 extends Applet {
             length += 10;
             x -= 5;
             y -= 5;
+            g.setColor(Color.green);
             g.drawOval(x, y, width, length);
         }
     }

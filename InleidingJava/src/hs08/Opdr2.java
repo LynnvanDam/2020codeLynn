@@ -86,5 +86,4 @@ public class Opdr2 extends Applet {
             repaint();
         }
     }
-
 }
